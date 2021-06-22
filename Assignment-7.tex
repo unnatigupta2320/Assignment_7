@@ -146,7 +146,7 @@ https://github.com/unnatigupta2320/Assignment_7
 In each of the following find the equation for the ellipse that satisfies the given conditions:
 \begin{enumerate}[label=\alph*.]
 \item Conjugate axis length= 8,
-foci= \myvec{\pm5\\0}
+Foci = \myvec{\pm5\\0}
 \end{enumerate}
 %
 \section{Solution}
@@ -154,9 +154,8 @@ Given that,
 \begin{align}
 \text{Conjugate axis length }&= 2b = 8 \label{eqA}
   \\
-\text{foci}&=\myvec{\pm c\\0} = \myvec{\pm5\\0} 
+\text{Foci}&=\vec{F} = \myvec{\pm5\\0} 
 \end{align}
-Here c= distance of foci of ellipse from origin
 \begin{lemma}
 \label{lemma}
 The standard equation of an ellipse is given by:
@@ -165,14 +164,18 @@ The standard equation of an ellipse is given by:
 \\
 \text{where, } D &=\myvec{\lambda_1& 0 \\ 0 & \lambda_2}
 \end{align}
+The focus of ellipse,$\vec{F}$ is 
+ \begin{align}
+  \vec{F} &= \sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}} \label{eqZ}
+\end{align}
 Also,the length of semi major axis, a is
 \begin{align}
   a = \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}} \label{eq1}
   \end{align}
- and the length of semi minor axis, b is
+and the length of semi minor axis, b is
   \begin{align}
-  b = \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}}
-\end{align}
+  b &= \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}}
+ \end{align}
 \end{lemma}
 \begin{enumerate}
 \item Using \eqref{eqA} length of conjugate axis is:
@@ -187,10 +190,14 @@ Also,the length of semi major axis, a is
 \\
 \implies \lambda_2&=\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{16}\label{eqC} 
 \end{align}
-\item Also, we know that,
+\item Using \eqref{eqZ}, the focus ellipse is given as:
 \begin{align}
- c^2 &=a^2-b^2    
-\\
+ \vec{F} &= \sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}
+ \\
+ \vec{F}^2 &= \frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}
+ \\
+ \vec{F}^2 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}
+ \\
 \implies 25 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}
 \end{align}
 \item Putting \eqref{eqB} in above equation we get:
