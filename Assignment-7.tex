@@ -164,9 +164,9 @@ The standard equation of an ellipse is given by:
 \\
 \text{where, } D &=\myvec{\lambda_1& 0 \\ 0 & \lambda_2}
 \end{align}
-The focus of ellipse,$\vec{F}$ is 
+The coordinates of foci of ellipse,$\vec{F}$ are 
  \begin{align}
-  \vec{F} &= \sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}} \label{eqZ}
+  \vec{F} &= \pm \brak{\sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}} \label{eqZ}
 \end{align}
 Also,the length of semi major axis, a is
 \begin{align}
@@ -192,11 +192,13 @@ and the length of semi minor axis, b is
 \end{align}
 \item Using \eqref{eqZ}, the focus ellipse is given as:
 \begin{align}
- \vec{F} &= \sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}
+ \vec{F} &= \pm \brak{\sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}}
+ \end{align}
+ or
+ \begin{align}
+\norm{\vec{F}}^2 &= \frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}
  \\
- \vec{F}^2 &= \frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}
- \\
- \vec{F}^2 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}
+\norm{\vec{F}}^2 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}
  \\
 \implies 25 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}
 \end{align}
