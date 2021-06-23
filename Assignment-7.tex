@@ -154,7 +154,7 @@ Given that,
 \begin{align}
 \text{Conjugate axis length }&= 2b = 8 \label{eqA}
   \\
-\text{Foci}&=\vec{F} = \myvec{\pm5\\0} 
+\text{Foci}&=\vec{F} = \myvec{\pm5\\0} \label{eqb}
 \end{align}
 \begin{lemma}
 \label{lemma}
@@ -164,9 +164,11 @@ The standard equation of an ellipse is given by:
 \\
 \text{where, } D &=\myvec{\lambda_1& 0 \\ 0 & \lambda_2}
 \end{align}
-The coordinates of foci of ellipse,$\vec{F}$ are 
+\end{lemma}
+\begin{lemma}
+The coordinates of foci of ellipse $\vec{F}$ with x-axis as major axis are:
  \begin{align}
-  \vec{F} &= \pm \brak{\sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}} \label{eqZ}
+  \vec{F} &= \myvec{ \pm \brak{\sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}}\\0} \label{eqZ}
 \end{align}
 Also,the length of semi major axis, a is
 \begin{align}
@@ -190,16 +192,18 @@ and the length of semi minor axis, b is
 \\
 \implies \lambda_2&=\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{16}\label{eqC} 
 \end{align}
-\item Using \eqref{eqZ}, the focus ellipse is given as:
+\item Using \eqref{eqZ}, the focus of ellipse is given as:
 \begin{align}
- \vec{F} &= \pm \brak{\sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}}
+ \vec{F} &= \myvec{\pm \brak{\sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}}\\0}
  \end{align}
  or
  \begin{align}
 \norm{\vec{F}}^2 &= \frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}
  \\
 \norm{\vec{F}}^2 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}
- \\
+ \end{align}
+ \item Using \eqref{eqb} we get:
+ \begin{align}
 \implies 25 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}
 \end{align}
 \item Putting \eqref{eqB} in above equation we get:
@@ -214,12 +218,16 @@ and the length of semi minor axis, b is
 \begin{align}
 \frac{\vec{y}^{\top}D\vec{y}}{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}=1
 \end{align}
-\item Putting \eqref{eqC} and \eqref{eqD} in above equation we get:
 \begin{align}
 \implies \frac{\vec{y}^{\top}\myvec{\lambda_1& 0 \\ 0 & \lambda_2}\vec{y} }{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}=1
 \end{align}
+\item Putting \eqref{eqC} and \eqref{eqD} in above equation we get:
 \begin{align}
 \implies \vec{y}^{\top}\myvec{\frac{1}{41}& 0 \\ 0 & \frac{1}{16}}\vec{y}=1
+\end{align}
+\item So,the equation of ellipse is:
+\begin{align}
+     \vec{y}^{\top}\myvec{\frac{1}{41}& 0 \\ 0 & \frac{1}{16}}\vec{y}=1
 \end{align}
 
 \item The Plot of ellipse is:
