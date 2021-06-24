@@ -36,16 +36,14 @@ B2 = -B1
 
 #Plotting the ellipse
 plt.plot(x[0,:],x[1,:],'r' ,label='ellipse')
-
-#Labelling points
-plt.plot(-5,0, 'o')
-plt.text(-5.4 ,-0.4,'F1',weight='bold')
-plt.plot(5,0, 'o')
-plt.text(4.8 ,-0.4,'F2',weight='bold')
 plt.plot(0,0, 'o')
-plt.text(-0.7 ,-0.3,'O',weight='bold')
+plt.text(0,0.2,'O',weight="bold")
 
 #Labelling points
+plt.plot(-5,0,'o',color='b')
+plt.text(-4.9,0.3,'$F_1$',weight="bold")
+plt.plot(5,0,'o',color='b')
+plt.text(4.9,0.3,'$F_2$',weight="bold")
 plt.plot(6.40,0,'o',color='g')
 plt.text(6.0 ,0,'A')
 plt.plot(0,4, 'o',color='g')
@@ -54,14 +52,14 @@ plt.text(0,3.5,'B')
 #Plotting line OF1
 O=np.array([0,0])
 F1=np.array([c,0])
-OF1 = line_gen(O,F1)
-plt.plot(OF1[0,:],OF1[1,:],'b')
+OF1 = line_gen(O,F_1)
+plt.plot(OF1[0,:],OF1[1,:],'g')
 
 #Plotting line OF2
 O=np.array([0,0])
 F2=np.array([-c,0])
-OF2 = line_gen(O,F2)
-plt.plot(OF2[0,:],OF2[1,:],'b')
+OF2 = line_gen(O,F_2)
+plt.plot(OF2[0,:],OF2[1,:],'g')
 
 
 
