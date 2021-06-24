@@ -152,9 +152,11 @@ Foci = \myvec{\pm5\\0}
 \section{Solution}
 Given that,
 \begin{align}
-\text{Conjugate axis length }&= 2b = 8 \label{eqA}
+\text{Conjugate axis length }&= 2b = 8 
+\\
+\therefore \text{Length of semi major axis, } b&=4\label{eqA}
   \\
-\text{Foci}&=\vec{F} = \myvec{\pm5\\0} \label{eqb}
+\text{Foci}&=\vec{F} = \myvec{\pm5\\0} \label{eqB}
 \end{align}
 \begin{lemma}
 \label{lemma}
@@ -166,33 +168,29 @@ The standard equation of an ellipse is given by:
 \end{align}
 \end{lemma}
 \begin{lemma}
-The coordinates of foci of ellipse $\vec{F}$ with x-axis as major axis are:
+The coordinates of foci $\vec{F}$ of ellipse  with x-axis as major axis are:
  \begin{align}
-  \vec{F} &= \myvec{ \pm \brak{\sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}}\\0} \label{eqZ}
+  \vec{F} &= \myvec{ \pm \brak{\sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}}\\0} \label{eqC}
 \end{align}
 Also,the length of semi major axis, a is
 \begin{align}
-  a = \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}} \label{eq1}
+  a = \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}} 
   \end{align}
 and the length of semi minor axis, b is
   \begin{align}
-  b &= \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}}
+  b &= \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}} \label{eqD}
  \end{align}
 \end{lemma}
 \begin{enumerate}
-\item Using \eqref{eqA} length of conjugate axis is:
+\item From \eqref{eqD} length of semi-minor axis is:
 \begin{align}
-2b &= 8
+ \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}} &= b
 \\
-\implies b  &= 4
+ \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2} &= b^2
 \\
- \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}} &= 4
-\\
- \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2} &= 16 \label{eqB}
-\\
-\implies \lambda_2&=\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{16}\label{eqC} 
+\implies \lambda_2&=\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{b^2}\label{eqF} 
 \end{align}
-\item Using \eqref{eqZ}, the focus of ellipse is given as:
+\item From \eqref{eqC}, the focus of ellipse is given as:
 \begin{align}
  \vec{F} &= \myvec{\pm \brak{\sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}}\\0}
  \end{align}
@@ -200,20 +198,37 @@ and the length of semi minor axis, b is
  \begin{align}
 \norm{\vec{F}}^2 &= \frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}
  \\
-\norm{\vec{F}}^2 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}
+\norm{\vec{F}}^2 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2} \label{eqE}
  \end{align}
- \item Using \eqref{eqb} we get:
- \begin{align}
-\implies 25 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}
-\end{align}
-\item Putting \eqref{eqB} in above equation we get:
+\item Putting value of $\lambda_2$ from \eqref{eqF} in above equation, we get:
 \begin{align}
-    25 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-16
+    \norm{\vec{F}}^2&= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-b^2
     \\
-    41 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}
+    \norm{\vec{F}}^2+b^2 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}
     \\
-     \implies\lambda_1&=\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{41} \label{eqD}
+ \implies \lambda_1 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\norm{\vec{F}}^2+b^2}\label{eq1}
+    \end{align}
+    \item \textit{For finding $\lambda_2$}:
+\begin{itemize}
+    \item From \eqref{eqF} we have:
+\begin{align}
+\lambda_2&=\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{b^2}
+\\
+\implies \lambda_2&=\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{16} \brak{\because b=4} \label{eqH}
 \end{align}
+\end{itemize}
+\item \textit{For finding $\lambda_1$:}
+\begin{itemize}
+\item Putting value of b from \eqref{eqA} and $\vec{F}$ from \eqref{eqB} in equation \eqref{eq1},we get:
+\begin{align}
+   \lambda_1&= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\brak{\sqrt{5^2+0^2}}^2+4^2}
+    \end{align}
+    \begin{align}
+     \lambda_1&= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{25+16}
+     \\
+      \lambda_1&= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{41}\label{eqG}
+\end{align}
+\end{itemize}
 \item Using lemma \eqref{lemma},the standard equation of ellipse is given by :
 \begin{align}
 \frac{\vec{y}^{\top}D\vec{y}}{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}=1
@@ -221,15 +236,11 @@ and the length of semi minor axis, b is
 \begin{align}
 \implies \frac{\vec{y}^{\top}\myvec{\lambda_1& 0 \\ 0 & \lambda_2}\vec{y} }{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}=1
 \end{align}
-\item Putting \eqref{eqC} and \eqref{eqD} in above equation we get:
+\item Putting \eqref{eqH} and \eqref{eqG} in above equation we get:
 \begin{align}
 \implies \vec{y}^{\top}\myvec{\frac{1}{41}& 0 \\ 0 & \frac{1}{16}}\vec{y}=1
 \end{align}
-\item So,the equation of ellipse is:
-\begin{align}
-     \vec{y}^{\top}\myvec{\frac{1}{41}& 0 \\ 0 & \frac{1}{16}}\vec{y}=1
-\end{align}
-
+which is the required equation of ellipse.
 \item The Plot of ellipse is:
 \numberwithin{figure}{section}
 \begin{figure}[!ht]
